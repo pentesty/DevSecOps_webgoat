@@ -12,13 +12,14 @@ pipeline {
             ''' 
       }
     }
+    
     stage ('Build') {
       steps {
         sh 'mvn clean install -DskipTests'
       }
     }
     
-    stage ('Build') {
+    stage ('directory') {
       steps {
       sh 'pwd'
        }
