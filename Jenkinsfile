@@ -21,7 +21,7 @@ pipeline {
     
     stage ('directory') {
       steps {
-      sh 'pwd'
+      sh 'java -jar webgoat-server/target/webgoat-server-v8.2.0-SNAPSHOT.jar'
        }
     }
   
