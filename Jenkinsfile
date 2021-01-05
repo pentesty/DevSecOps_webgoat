@@ -12,15 +12,15 @@ pipeline {
             ''' 
       }
     }
-    stage ('Check-content') {
+    stage ('Build') {
       steps {
-        sh 'ls -la'
+        sh 'mvn clean install -DskipTests'
       }
     }
     
     stage ('Build') {
       steps {
-      sh 'mvn clean install -DskipTests'
+      sh 'pwd'
        }
     }
   
