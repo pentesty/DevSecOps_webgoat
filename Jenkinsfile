@@ -2,7 +2,6 @@ pipeline {
   agent any 
   tools {
     maven 'Maven'
-    dependency-check "OWASP-DC"
   }
   stages {
     stage ('Initialize') {
@@ -20,14 +19,18 @@ pipeline {
       }
     }
     
-    
-    stage('Dependency Check') {
-        steps {
-            // Run OWASP Dependency Check
-            dependencyCheck additionalArguments: '-f "HTML, XML,CSV" -s .'
-        }
-      }
-   
+    stage ('OWASP Dependency-Check Vulnerabilities') {
+            steps {
+                dependencyCheck additionalArguments: ''' 
+                    -o "./" 
+                    -s "./"
+                    -f "ALL" 
+                    --prettyPrint''', odcInstallation: 'OWASP-DC'
+
+                dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+            }
+        }     
+  
     
     stage ('Run') {
       steps {
