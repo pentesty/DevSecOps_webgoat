@@ -2,6 +2,7 @@ pipeline {
   agent any 
   tools {
     maven 'Maven'
+    dependency-check "OWASP-DC"
   }
   stages {
     stage ('Initialize') {
@@ -19,6 +20,15 @@ pipeline {
       }
     }
     
+    
+    stage('Dependency Check') {
+        steps {
+            // Run OWASP Dependency Check
+            dependencyCheck additionalArguments: '-f "HTML, XML,CSV" -s .'
+        }
+      }
+   
+    
     stage ('Run') {
       steps {
       sh 'nohup java -jar webgoat-server/target/webgoat-server-v8.2.0-SNAPSHOT.jar &'
@@ -26,7 +36,7 @@ pipeline {
     }
   
     
-    stage ('check') {
+    stage ('DAST') {
       steps {
          sh 'ls -la'
       }
