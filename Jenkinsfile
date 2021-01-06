@@ -13,7 +13,7 @@ pipeline {
       }
     }
     
-    stage ('Build') {
+    stage ('Install dependencies') {
       steps {
         sh 'mvn clean install -DskipTests'
       }
@@ -31,6 +31,13 @@ pipeline {
             }
         }     
   
+    stage ('Static analysis with sonarqube') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          sh 'mvn sonar:sonar'
+        }
+      }
+    }
     
     stage ('Run') {
       steps {
