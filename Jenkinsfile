@@ -19,9 +19,9 @@ pipeline {
       }
     }
     
-    stage ('directory') {
+    stage ('Run') {
       steps {
-      sh 'java -jar webgoat-server/target/webgoat-server-v8.2.0-SNAPSHOT.jar &'
+      sh 'nohup java -jar webgoat-server/target/webgoat-server-v8.2.0-SNAPSHOT.jar &'
        }
     }
   
