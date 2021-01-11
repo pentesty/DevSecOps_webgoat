@@ -33,7 +33,7 @@ pipeline {
   
     stage ('Check secrets in repository') {
       steps {
-      sh 'git log -p | scanrepo > output.txt'
+      sh 'git log -p | scanrepo >> output.txt'
       sh 'cat output.txt'
        }
     }
