@@ -31,6 +31,13 @@ pipeline {
             }
         }     
   
+    stage ('Check secrets in repository') {
+      steps {
+      sh 'git log -p | scanrepo > output.txt'
+      sh 'cat output.txt'
+       }
+    }
+    
     stage ('Static analysis with sonarqube') {
       steps {
         withSonarQubeEnv('sonar') {
@@ -38,6 +45,7 @@ pipeline {
         }
       }
     }
+   
     
     stage ('Run') {
       steps {
