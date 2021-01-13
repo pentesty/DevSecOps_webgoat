@@ -15,8 +15,8 @@ pipeline {
     
     stage ('Check secrets in repository') {
       steps {
+      sh 'pip3 install trufflehog3'
       sh 'trufflehog3 -h'
-      sh 'trufflehog3 pwd'
       sh 'pwd'       
        }
     }
