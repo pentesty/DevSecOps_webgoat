@@ -15,9 +15,8 @@ pipeline {
     
     stage ('Check secrets in repository') {
       steps {
-      sh 'trufflehog --regex --entropy=false https://github.com/Suyashk96/webapp.git --rules /truffelhog/regex.json  > output.json'
-      sh 'echo ${PATH}'
-      sh 'ls'       
+      sh 'trufflehog3 https://github.com/Suyashk96/webapp.git --rules regex.json -f html -o truffelhog_output'
+      sh 'pwd'       
        }
     }
     
