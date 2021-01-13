@@ -15,6 +15,7 @@ pipeline {
     
     stage ('Check secrets in repository') {
       steps {
+      sh 'pip3 install trufflehog3'
       sh 'trufflehog3 https://github.com/Suyashk96/webapp.git --rules regex.json -f html -o truffelhog_output'
       sh 'pwd'       
        }
