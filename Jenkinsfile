@@ -15,9 +15,8 @@ pipeline {
     
     stage ('Check secrets in repository') {
       steps {
-      sh 'trufflehog3 ${WORKSPACE} -f html -o truffelhog_output'
-      sh 'sudo python3 /dumpster_diver/DumpsterDiver/DumpsterDiver.py -p ${WORKSPACE} -o DumpsterDiver_output'
-      sh 'ls'
+      sh 'cd /dumpster_diver/DumpsterDiver/ ; sudo python3 DumpsterDiver.py -p ${WORKSPACE} -o DumpsterDiver_output'
+      sh 'cat DumpsterDiver_output; cd ${WORKSPACE}'
       }
     }
     
