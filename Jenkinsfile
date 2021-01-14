@@ -16,7 +16,8 @@ pipeline {
     stage ('Check secrets in repository') {
       steps {
       sh 'cd /dumpster_diver/DumpsterDiver/ ; sudo python3 DumpsterDiver.py -p ${WORKSPACE} -o DumpsterDiver_output'
-      sh 'cat DumpsterDiver_output; cd ${WORKSPACE}'
+      sh 'pwd'
+      sh 'cd ${WORKSPACE}'
       }
     }
     
