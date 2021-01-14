@@ -15,9 +15,10 @@ pipeline {
     
     stage ('Check secrets in repository') {
       steps {
-      sh 'trufflehog3 -h'
-      sh 'pwd'       
-       }
+      sh 'trufflehog3 `pwd` --rules regex.json -f html -o truffelhog_output'
+      sh 'python3 /dumpster_diver/DumpsterDiver/DumpsterDiver.py -p `pwd` -o DumpsterDiver_output'
+      sh 'ls'
+      }
     }
     
     stage ('Install dependencies') {
