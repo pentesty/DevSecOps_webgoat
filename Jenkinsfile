@@ -16,8 +16,7 @@ pipeline {
     stage ('Check secrets in repository') {
       steps {
       sh 'cd /dumpster_diver/DumpsterDiver/ ; sudo python3 DumpsterDiver.py -p ${WORKSPACE} -o DumpsterDiver_output'
-      sh 'pwd'
-      sh 'cd ${WORKSPACE}'
+      sh 'trufflehog3 https://github.com/Suyashk96/webGoat_java.git -f html -o truffelhog_output || true'
       }
     }
     
