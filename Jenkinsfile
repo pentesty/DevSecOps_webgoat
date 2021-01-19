@@ -56,7 +56,8 @@ pipeline {
     
     stage ('DAST') {
       steps {
-         sh 'ls -la'
+         sh 'sudo docker run -t owasp/zap2docker-stable zap-baseline.py -t http://192.168.0.106/WebGoat/ > zap_output'
+         sh 'cat zap_output'
       }
     }
    }  
