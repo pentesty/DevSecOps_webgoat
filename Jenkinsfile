@@ -56,7 +56,7 @@ pipeline {
     
     stage ('DAST') {
       steps {
-         sh 'sudo docker run -t owasp/zap2docker-stable zap-baseline.py -t http://192.168.0.106/WebGoat/ > zap_output'
+         sh 'sudo docker run -t owasp/zap2docker-stable zap-baseline.py -t http://192.168.0.106/WebGoat/ > zap_output || true'
          sh 'cat zap_output'
          sh 'cd /arachni/arachni-1.5.1-0.5.12/bin/; sudo ./arachni http://192.168.0.106/WebGoat --report-save-path=DAST.afr'
       }
