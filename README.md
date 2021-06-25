@@ -71,3 +71,5 @@ This is used for security monitoring
 * [AWS Security Hub](https://aws.amazon.com/security-hub/?aws-security-hub-blogs.sort-by=item.additionalFields.createdDate&aws-security-hub-blogs.sort-order=desc)
 
 ## Integration of security tools
+
+* [Integration of security tools](https://github.com/Suyashk96/webGoat_java/blob/master/Integration%20of%20security%20tools%20in%20jenkins%20(2).pdf)
