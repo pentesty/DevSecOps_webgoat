@@ -73,4 +73,4 @@ This is used for security monitoring
 
 ## Integration of security tools
 
-* [Integration of security tools](Integration of security tools in jenkins (2).pdf)
+* [Intergration_of_Security_tools.pdf](https://github.com/Suyashk96/webGoat_java/Intergration_of_Security_tools.pdf)
