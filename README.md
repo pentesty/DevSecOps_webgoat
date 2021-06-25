@@ -21,7 +21,7 @@
 
 # Information
 
-![Integration of security tools in jenkins (2).pdf](./Integration of security tools in jenkins (2).pdf) 
+* [Intergration_of_Security_tools.pdf](./Intergration_of_Security_tools.pdf) 
 
 ## Secure Development Processes
 
@@ -73,4 +73,4 @@ This is used for security monitoring
 
 ## Integration of security tools
 
-* [Integration of security tools](https://github.com/Suyashk96/webGoat_java/blob/master/Integration%20of%20security%20tools%20in%20jenkins%20(2).pdf)
+* [Integration of security tools](Integration of security tools in jenkins (2).pdf)
