@@ -1,27 +1,37 @@
-# DevSecOps - Pipeline
+# DevSecOps 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Information](#information)
-  - [Secure Development Process](#secure-development-processes)
-  - [Awareness of Security Risks](#awareness-of-security-risks)
 
-- [Tools and Resources](#tools-and-resources)
-  - [Pre-commit or Pre-push hooks](#pre-commit-or-pre-push-hooks)
-  - [Secret Scanning](#secret-scanning)
-  - [SCA (Source composition analysis)](#sca-source-composition-analysis)
-  - [SAST (Static Application Security Testing)](#sast-static-application-security-testing)
-  - [DAST (Dynamic Application Security Testing)](#dast-dynamic-application-security-testing)
-  - [Security monitoring and infrastructure misconfigurations](#security-monitoring-and-infrastructure-misconfigurations)
+DevOps is a combination of cultural philosophies, practices, and tools that combine software development with information technology operations. These combined practices enable companies to deliver new application features and improved services to customers at a higher velocity
 
-  - [Integration of security tools](#integration-of-security-tools)
-  
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+Security testing is often treated as an ‘after the process’ necessity. This leaves the ongoing operations defenseless to malicious attacks. 
+Application security testing is done after the software delivery. With this approach security defects are found at the last stage, and it's very expensie and time consuming process to eliminate those defects. In that case security as a part of process is the only only way to ensure safety. 
 
-# Information
+### DevSecOps is the ideology to integrate security practices into the software devlopment life cycle, create security as code culture.
 
-* [Intergration_of_Security_tools.pdf](./Intergration_of_Security_tools.pdf) 
+Advantages of DevSecOps:
+ * Early identification of vulnerabilities in code during development
+ * Greater flexibility in managing sudden changes during the development lifecycle
+
+### DevSecOps Workflow:
+
+![workflow_diagram](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/sample_architechture.PNG)
+
+
+### Integrate Security checks into jenkins pipeline 
+
+To implement devsecops pipeline we are using java based vulnerable WebGoat application. We are injectiong following security checks into jenkins pipeline.
+
+  * Pre-commit hooks
+  * Secret Scanning
+  * SCA (Source composition analysis)
+  * SAST (Static Application Security Testing)
+  * DAST (Dynamic Application Security Testing)
+  * Security monitoring and infrastructure misconfigurations
+
+![start_caQtDM_7id.sh](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/DevSecOps_case_study.jpg)
 
 ## Secure Development Processes
 
@@ -37,13 +47,13 @@
 
 ## Pre-commit or Pre-push hooks
 
-This tool is ued for
+Prevents developer from commiting senstitive information such as SSH keys, API keys, passwords, AWS keys. It validates the outgoing changeset for things that look suspicious.
 
 * [Tailsman](https://github.com/thoughtworks/talisman)
 
 ## Secret Scanning
 
-This tool is used for 
+Searches through git repositories for secrets, digging deep into commit history and branches. This is effective at finding secrets accidentally committed 
 
 * [TruffelHog](https://github.com/trufflesecurity/truffleHog)
 
@@ -67,10 +77,9 @@ DAST tools run automated penetration testing scans against a running service as 
 
 ## Security monitoring and infrastructure misconfigurations
 
-This is used for security monitoring
+Continuously scan your AWS accounts for configuration errors using various security standards and roll up security check results at the account and multi-account level to understand your overall security state.
+
+AWS Security Hub collects and consolidates findings from AWS security services enabled in your environment, such as intrusion detection findings from Amazon GuardDuty, vulnerability scans from Amazon Inspector, and S3 bucket policy findings from Amazon Macie.
 
 * [AWS Security Hub](https://aws.amazon.com/security-hub/?aws-security-hub-blogs.sort-by=item.additionalFields.createdDate&aws-security-hub-blogs.sort-order=desc)
 
-## Integration of security tools
-
-* [Intergration_of_Security_tools.pdf](https://github.com/Suyashk96/webGoat_java/Intergration_of_Security_tools.pdf)
