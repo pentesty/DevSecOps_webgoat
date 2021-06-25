@@ -17,7 +17,7 @@ Advantages of DevSecOps:
 
 ### DevSecOps Workflow:
 
-![workflow_diagram](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/sample_architechture.PNG)
+![workflow_diagram](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/DevSecOps_workflow.JPG)
 
 
 ### Integrate Security checks into jenkins pipeline 
@@ -30,8 +30,9 @@ To implement devsecops pipeline we are using java based vulnerable WebGoat appli
   * SAST (Static Application Security Testing)
   * DAST (Dynamic Application Security Testing)
   * Security monitoring and infrastructure misconfigurations
+  * Vulnerability management
 
-![start_caQtDM_7id.sh](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/DevSecOps_case_study.jpg)
+![start_caQtDM_7id.sh](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/DevSecOps_case_study%20(1).jpg)
 
 ## Secure Development Processes
 
@@ -82,4 +83,10 @@ Continuously scan your AWS accounts for configuration errors using various secur
 AWS Security Hub collects and consolidates findings from AWS security services enabled in your environment, such as intrusion detection findings from Amazon GuardDuty, vulnerability scans from Amazon Inspector, and S3 bucket policy findings from Amazon Macie.
 
 * [AWS Security Hub](https://aws.amazon.com/security-hub/?aws-security-hub-blogs.sort-by=item.additionalFields.createdDate&aws-security-hub-blogs.sort-order=desc)
+
+## Vulnerability management tool 
+
+Vulnerability management tool allows you to manage your application security program, maintain product and application information, triage vulnerabilities and push findings into defect trackers. Consolidate your findings
+
+* [DefectDojo](https://github.com/DefectDojo/django-DefectDojo)
 
