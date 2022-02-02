@@ -28,7 +28,7 @@ To implement devsecops pipeline we are using java based vulnerable WebGoat appli
   * Vulnerability assessment
   * Vulnerability management
 
-![DevSecOps_pipeline](https://geeklab.afourtech.com/hackathon-june-21/daemondemons/blob/devsecops/Documents/DevSecOps_case_study.jpg)
+![DevSecOps_pipeline](https://github.com/Suyashk96/DevSecOps_webgoat/blob/master/DevSecOps_case_study.jpg)
 
 ## Secure Development Processes
 
