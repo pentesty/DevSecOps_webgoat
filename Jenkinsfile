@@ -74,12 +74,14 @@ pipeline {
 
    stage ('Security monitoring and misconfigurations') {
         steps {
+		sh 'echo "AWS misconfiguration"'
             // sh './securityhub.sh'
             }
     }
 	
    stage ('Incidents report') {
         steps {
+	sh 'echo "Final Report"'
          // sh './final_report.sh'
         }
     }	  
