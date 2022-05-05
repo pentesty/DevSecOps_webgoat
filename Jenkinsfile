@@ -66,18 +66,18 @@ pipeline {
            }       
     }
   
-    stage ('Host vulnerability assessment') {
-        steps {
-             sh 'echo "In-Progress"'
-            }
-    }
+   // stage ('Host vulnerability assessment') {
+   //     steps {
+  //           sh 'echo "In-Progress"'
+   //         }
+   // }
 
-   stage ('Security monitoring and misconfigurations') {
-        steps {
-		sh 'echo "AWS misconfiguration"'
+  // stage ('Security monitoring and misconfigurations') {
+  //      steps {
+ //		sh 'echo "AWS misconfiguration"'
             // sh './securityhub.sh'
-            }
-    }
+   //         }
+   // }
 	
    stage ('Incidents report') {
         steps {
